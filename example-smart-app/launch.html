@@ -49,7 +49,7 @@
                 tokenUri;
             
             var smartExtension = r.rest[0].security.extension.filter(function (e) {
-               return (e.url === "http://fhir-registry.smarthealthit.org/StructureDefinition/oauth-uris");
+               return (e.url === "https://r4.smarthealthit.org/StructureDefinition/oauth-uris");
             });
 
             smartExtension[0].extension.forEach(function(arg, index, array){
