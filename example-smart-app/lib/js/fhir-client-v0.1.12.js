@@ -17050,7 +17050,7 @@ function completeTokenRefreshFlow() {
   var tokenResponse = getPreviousToken();
   var state = JSON.parse(sessionStorage[tokenResponse.state]);
   var refresh_token = tokenResponse.refresh_token;
-
+  console.log(">>> token_uri: " + state.provider.oauth2.token_uri);
   Adapter.get().http({
     method: 'POST',
     url: state.provider.oauth2.token_uri,
